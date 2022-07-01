@@ -17,12 +17,10 @@ class container {
         return -1;
     }
 
-
     int valIndex(std::string val){
         for (int i =0;i<this->valueArr.size();i++) if (val == this->valueArrArr[i]) return i;
         return -1;
     }
-
 
     T& getVal(std::string key){
         if (keyIndex(key) != -1) return valueArr[(keyIndex(key))];
@@ -38,7 +36,6 @@ public:
     T& operator[](std::string key){
         return getVal(key);
     }
-
 
     const T& operator[](std::string key) const{
         return getVal(key);
